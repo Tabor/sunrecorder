@@ -92,7 +92,7 @@ class PostsController < ApplicationController
   
   def authenticate
     authenticate_or_request_with_http_basic do |name, password|
-      name == "admin" && password == "admin"
+      name == "admin" && password == "PASSWORD"
     end
   end
 end
