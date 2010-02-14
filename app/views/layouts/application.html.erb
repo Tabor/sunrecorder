@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<%= stylesheet_link_tag "sunstyles" %>
+    <title><%= @pagetitle %></title>
+
+  </head>
+  
+  <body>
+  	
+		<div id='pagewrapper'>
+		
+			<div id='header'>
+				<h1>Sunrecorder Nuclear Test Area!</h1>
+				<%= link_to "Home", :controller => "start", :action => "index" %> |
+				<%= link_to "Blog", :controller => "posts", :action => "index" %>
+			</div> 
+			
+			<div id='navbar'>
+				
+			</div>
+			
+			<div id='content'>
+				
+				<%= yield %>
+				
+			</div>
+			
+			<div id='footer'>
+				<p>
+					<%= Time.now %>
+				</p>
+			</div>
+			
+		</div>
+		
+  </body>
+</html>
